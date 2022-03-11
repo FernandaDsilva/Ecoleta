@@ -2,42 +2,48 @@
   width: 90%;
   max-width: 1100px;
 
-  /* alinhamento de caixa por fora  */
+  /* Alinhamento de caixa pelo lado de fora da caixa */
   margin: 0 auto;
 }
 
 #page-create-point header {
   margin-top: 48px;
+
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 #page-create-point header a {
-  display: flex;
   color: var(--title-color);
-  font-weight: 700;
-  text-decoration: none;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
 }
 
 #page-create-point header a span {
   margin-right: 16px;
+  background-image: url('../assets/arrow-left.svg');
+
   display: flex;
-  background-image: url("../assets/arrow-left.svg");
+  
   width: 20px;
   height: 24px;
 }
 
 form {
-  max-width: 780px;
-  margin: 80px auto;
   background-color: white;
+  margin: 80px auto;
+  /* Preenchimento || Respiro Interno */
   padding: 64px;
+
   border-radius: 8px;
-  margin-top: 80px;
+
+  max-width: 730px;
 }
 
-fomr h1 {
+form h1 {
   font-size: 36px;
 }
 
@@ -48,16 +54,28 @@ form fieldset {
 
 form legend {
   margin-bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 form legend h2 {
   font-size: 24px;
 }
 
+form legend span {
+  font-size: 14px;
+  color: var(--title-color);
+}
+
 form .field {
   flex: 1;
+
   display: flex;
   flex-direction: column;
+
   margin-bottom: 24px;
 }
 
@@ -66,76 +84,102 @@ form .field-group {
 }
 
 form input,
-select {
+form select {
   background-color: #f0f0f5;
+
+  border: 0;
   padding: 16px 24px;
   font-size: 16px;
 
-  /* outline: none; */
-  border: none;
   border-radius: 8px;
+  
+  /* outline: none; */
+}
+
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 form label {
-    font-size: 14px;
-    margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
-/* para aplicar estilo no segundo campo */
+
 form .field-group .field + .field {
-    margin-left: 24px;
+  margin-left: 24px;
 }
 
 form button {
-    width: 260px;
-    height: 56px;
-    background-color: var(--primary-color);
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    border: 0;
-    margin-top: 40px;
-    transition: background-color 400ms;
-}
-form button:hover{
-     background-color: #2fb86e;
+  width: 260px;
+  height: 56px;
+
+  cursor: pointer; /* preferencia minha */
+  background-color: var(--primary-color);
+  border-radius: 8px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+
+  border: 0;
+
+  display: block;
+  margin-top: 64px;
+  margin-left: auto;
+
+  transition: backgroud-color 400ms;
 }
 
-.itens-grid {
+form button:hover {
+  background-color: #2fb86e;
+}
+
+.items-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 }
 
-.itens-grid li{
+.items-grid li {
   background-color: #f5f5f5;
   list-style: none;
+
   border: 2px solid #f5f5f5;
   border-radius: 8px;
+
   height: 180px;
+
   padding: 32px 24px 16px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
   text-align: center;
+
   cursor: pointer;
 }
 
-.itens-grid span {
+.items-grid li span {
   margin-top: 12px;
+  
   flex: 1;
-   display: flex;
-   align-items: center;
-   color: var(--title-color);
+
+  display: flex;
+  align-items: center;
+
+  color: var(--title-color);
 }
 
-.itens-grid li.selected {
-  background-color: #e1faec;
+.items-grid li.selected {
+  background: #e1faec;
   border: 2px solid #34cb79;
 }
-/* Para pegar somente o elemento li */
-.itens-grid li img,
-.itens-grid li span {
+
+.items-grid li img,
+.items-grid li span {
   pointer-events: none;
 }
