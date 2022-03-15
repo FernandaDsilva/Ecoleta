@@ -1,34 +1,52 @@
 {% extends "layout.html" %}
+{#Irá pegar todo o conteudo do layout, através do nunjucks#}
 
+{#Toda parte de código que será substituida precisa estar dentro de um bloco de código, para que o extends leia#}
+
+{#Para criar uma variável com Id #}
 {% set pageId = "page-home" %}
 
+{#Title será dinamico#}
+{% block name %}
+    <title>Ecoleta</title>
+{% endblock name %}
+
+{#Dentro do bloco quero colocar o que irá substituir#}
 {% block styles %}
-  <link rel="stylesheet" href="/styles/home.css">
-  <link rel="stylesheet" href="/styles/modal.css">
-{% endblock %}
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/modal.css">
+{% endblock styles %}
 
+{#<div id="page-home" e a seguir o conteudo principal#}
 {% block content %}
-  <div class="content">
-    <header>
-      <img src="/assets/logo.svg" alt="Logomarca">
-      <a href="/create-point">
-        <span></span>
-        Cadastre um ponto de coleta
-      </a>
-    </header>
-    <main>
-      <h1>Seu marketplace de coleta de resíduos</h1>
-      <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
-      <a><span></span><strong>Pesquisar pontos de coleta</strong></a>
-    </main>
-  </div>
-{% endblock %}
+    <div class="content">
+        <header>
+            <img src="./assets/logo.svg" alt="Logomarca">
+            <!--Alt caso não carrega ira apresentar o texto logomarcar-->
+            <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta
+            </a>
+        </header>
 
+        <main>
+            <h1>Seu marketplace de coleta de resíduos</h1>
+            <!--Variavel entre chaves criado apartir do nunjucks-->
+            <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
+        </main>
+    </div>
+{% endblock content %}
+
+{#Bloco Modal#}
 {% block modal %}
-  {% include "partials/modal.html" %}
-{% endblock %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
 
-
+{#Bloco de Scripts#}
 {% block scripts %}
-  <script src="scripts/index.js"></script>
-{% endblock %}
+    <script src="./scripts/index.js"></script>
+{% endblock scripts %}

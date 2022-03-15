@@ -1,36 +1,31 @@
-:root {
-    --title-color: #322153;
+
+:root { /* : siginifica acessar a raiz do documento*//*Propriedades repetidas, vamos colocar em formatdo de variaveis*/
+    --title-color: #322153; /*Posso usar essa variavel no documento todo, caso queira mudar a cor dos elementos que possuem ela, pode alterar essa variavel*/
     --primary-color: #34cb79;
-  }
-  
-  * {
+}
+
+* { /*Atalho para todos seletores/elementos*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  html {
+}
+
+html {
     font-family: 'Roboto', sans-serif;
-  }
-  
-  body {
+}
+
+body {
     background: #f0f0f5;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  a {
+    --webkit-font-smoothing: antiliased;/*A font fica mais amigável*/
+}
+
+a {
     text-decoration: none;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
     color: var(--title-color);
-  }
-  
-  /* BOX MODEL
-  Modelo de caixa 
-  Toda caixa tem
-  largura, altura, espaçamentos, preenchimentos
-  bordas, cor, fundo, maneira que é vista pelo HTML (display),
-  posicionamento, alinhamentos
-  */
+    font-family: 'Ubuntu', sans-serif; /*Font from google.fonts*/
+}
+
+

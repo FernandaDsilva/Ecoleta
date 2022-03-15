@@ -19,7 +19,8 @@
   "homepage": "https://github.com/FernandaDsilva/Ecoleta#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.3",
+    "sqlite3": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
